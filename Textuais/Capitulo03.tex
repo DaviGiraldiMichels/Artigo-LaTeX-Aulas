@@ -277,6 +277,18 @@ Depois de migrar para o \LaTeX localmente precisamos entender erros e falhas atr
 
 \section{Aula 9}
 
+Na aula 9 tivemos nossa primeira aula de git. Na aula passada aprendemos a rodar o \LaTeX na maquina, e diferente do Overleaf quando rodamos na maquina não existe um versionamento do texto e os arquivos não ficam salvos na nuvem. O git e github vem para solucionar esses problemas, com o git podemos fazer o versionamento do código e cada versão desse código colocamos dentro do github para ficar salvo na nuvem,e sempre que precisar acessar o projeto ou modificar em outra máquina e outro lugar, é só puxar o repositório do github que o código já vem atualizado.
+
+O git é um sistema de controle de versão distribuído criado por Linus Torvalds, o mesmo criador do linux. Ele foi feito para códigos de software como python, c++, entc.. mas como o \LaTeX é puramente código em texto, o git é a ferramenta absoluta e perfeita para gerenciar teses e artigos. O git funciona com snapshots, que são "fotos" do estado em que o código está no momento, além de registrar quem alterou, o que alterou e quando alterou, permitindo ver as antigas versões sem precisar duplicar arquivos no computador.
+
+Diferente de editar um arquivo word que salva tudo automaticamente, no git essas alterações tem que ser feitas manualmente através de comandos no terminal. Quando você está editando o arquivo, o git ainda não está rastreando essas mudanças, para mostrar para o git qual arquivo foi modificado usamos o comando "git add" e passamos o arquivo que queremos salvar as modificações na próxima versão, por exemplo "git add main.tex", ou podemos adicionar todos os arquivos da pasta com o comando "git add .". Para tirar a snapshot utilizamos o comando "git commit -m 'mensagem do commit'", com esse comando todos os arquivos que foram adicionados com o comando anterior são salvos em uma fot e essa versão fica permanentemente gravada no banco de dados local com a mensagem de descrição.
+
+Existem alguns arquivos que não compensam ir para o repositório, na aula passada vimos que rodar o \LaTeX na maquina gera alguns arquivos teporarios e gera um novo pdf toda vez que compulamos o codigo, e esses arquivos só ocupariam espaço no repositório do git sem necessidade. Para isso existe um arquivo .gitignore, todos os arquivos e extensões que colcoar dentro desse arquivo vão ser ignoradas pelo git, e dessa forma você pode digitar "git add ." e mesmo assim esses arquivos não serão salvos no commit
+
+Depois de entender o que é o git, aprendemos sobre o github, que é um local online onde colocar todas as versões do git na nuvem, podendo acessar qualquer hora de qualquer lugar, e permite que várias pessoas façam alterações no mesmo projeto de várias máquinas diferentes.
+
+Para conectar sua máquina local à nuvem, usamos o comando de rede "git remote add origin https://github.com/SeuUser/SeuTCC.git", com esse comando o seu projeto já está conectado na nuvem. Depois de fazer os commits do seu projeto, conseguimos mandar a snapshot do projeto da máquina para a nuvem com o comando "git push-u origin main". Se mais de uma pessoa estão modificando o mesmo projeto e precisa puxar as modificações feitas por outra pessoa utilizamos o comando "git pull origin main".
+
 
 
 \section{Aula 10}
