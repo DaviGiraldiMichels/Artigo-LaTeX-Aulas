@@ -1,0 +1,46 @@
+
+
+
+\chapter{Fundamentação Teórica}
+\lipsum[1-3]
+
+\section{O Paradigma LaTex}
+O paradigma Latex baseia-se no conceito de entre conteúdo e formatação. Ao contrario de software como o Microsoft Word que utilizam sistemas de WYSIWYG (What Tou See Is What You Get), cuja tradução significa "O que você vê é o que você obtém", isso significa que o conteúdo editado na tela aparece de forma idêntica ao seu resultado final, seja na impressão ou publicado em um site. 
+
+Já o \LaTeX utiliza a filosofia WYSIWYM (What You See Is What You Mean), cuja tradução é "O que você vê é o que você quer dizer", isso significa que o usuário foca na estrutura e no significado do conteúdo, estruturando títulos, seções e equações por meio de comandos, e deixa a cargo do \LaTeX a tarefa de tipografar e diagramar o documento final automaticamente.
+
+
+\section{Lorem Ipsum}
+
+O Lorem Ipsim em design gráfico e editoração é um texto em latim de uma passagem embaralhada de De filosofia latina escrita em 45 a.C. Esse texto é utilizado na produção gráfica para preencher espaços em publicações para textar e ajustar aspectos visuais, como layout, tipografia, formatação, antes de utilizar conteúdo real. Também é utilizado em catálogos tipográficos, para demonstrar textos e títulos escritos com uma fonte tipográfica.
+
+\section{Footnote}
+
+O footnote (que significa nota de rodapé, em português) é uma ferramenta usada em textos para adicionar uma informação extra sem atrapalhar a leitura principal. Muito utilizado em livros para explicar algumas palavras, quando você está lendo um livro e, de repente, aparece um numerozinho menor lá no alto de uma palavra assim¹. Se você olhar para a parte mais baixa daquela mesma página, o rodapé, o mesmo número vai estar lá com uma explicação sobre aquela palavra. Isso é um footnote.
+Para fazer a criação de um footnote no \LaTeX basta usar o comando \textbackslash footnote\{\} do lado da palavra que vai ter o footnote, e dentro das chaves colocar a explicação que vai estar escrito do no rodapé da página
+
+\section{Ambiente Matemático}
+
+O ambiente matemático no \LaTeX é um conjunto de regras e comandos especiais usados para formatar símbolos, equações, frações, matrizes e expressões matemáticas com alta qualidade tipográfica. Quando você digita matemática nesse modo, o \LaTeX ajusta automaticamente o espaçamento, o tamanho das fontes e os símbolos.
+
+Existe duas formas principais de inserir formas matemáticas no \LaTeX, o método inline e o método dysplay. O método inline é usado para colocar formulas matemáticas pequenas no meio de uma linha de texto, para usar esse método iniciamos o ambiente virtual colocando o símbulo \$ antes e depois da expressão. Já o método display é utilizado para expressões mais complexas, quando escrevemos uma expressão matemática com o método display o \LaTeX cria uma nova linha e centraliza a expressão. Para criar um ambiente display utiliamos o comando \textbackslash begin\{equation\} no começo da expressão e \textbackslash end\{equation\} 
+
+
+\section{Ambientes Flutuantes}
+
+No LaTeX, um ambiente flutuante é um bloco de conteúdo, geralmente usado para figuras ou tabelas, que o LaTeX reposiciona automaticamente para otimizar a paginação do documento.
+Em vez de quebrar uma imagem ao meio ou deixar um grande espaço em branco no final de uma página, o LaTeX "flutua" esse bloco para o local mais adequado visualmente, como o topo da página atual, a próxima página ou uma página dedicada apenas a elementos visuais.
+
+\section{Referências Cruzadas}
+
+As referências cruzadas no LaTeX servem para você citar elementos do seu documento, como seções, imagens, tabelas e equações de forma totalmente automatizada. A maior vantagem é que, se você mudar a ordem dos capítulos ou adicionar novas figuras, o LaTeX atualiza todos os números no texto sozinho, evitando erros manuais. Para criar as referências basta utilizar o \textbackslash label\{NomeDoLabel\} e quando for citar no texto basta utilizar o comando \textbackslash ref\{NomeDoLabel\}
+
+\section{abnTeX2}
+O abnTeX2 é uma suíte de customização para o ecossistema \LaTeX projetada para automatizar a formatação de documentos acadêmicos de acordo com as normas da ABNT (Associação Brasileira de Normas Técnicas). Ele funciona como uma evolução do pacote original abnTeX 
+A suíte baseia-se na classe memoir, que da ao usuário controle total sobre o design e a tipografia do documento, sem precisar carregar vários pacotes adicionais, e engloba uma classe principal abntex2.cls, pacotes específicos para a formatação de citações e referências bibliográficas abntex2cite, além de uma vasta coleção de modelos de documentos e arquivos exemplares.
+
+\section{Latexmk}
+
+O Latexmk é uma ferramenta que funcionando como um automatizador completo do processo de compilação. O seu principal objetivo é livrar o usuário da tarefa repetitiva de executar manualmente múltiplos comandos para atualizar referências, citações bibliográficas, sumários e índices textuais.
+
+Por padrão, quando um documento LaTeX possui citações ou links cruzados, o compilador precisa rodar comandos como pdflatex, bibtex e novamente pdflatex várias vezes para que todas as referências apareçam corretamente no documento final. O Latexmk resolve esse problema monitorando as dependências do projeto e calculando de forma inteligente o número exato de vezes que cada motor de compilação precisa ser executado.

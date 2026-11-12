@@ -1,0 +1,289 @@
+
+
+\chapter{Metodologia prática}
+\lipsum[1-3]
+\section{Aula 1}
+Hoje dia \today começamos o curso de \LaTeX na \textbf{UDESC CEPLAN} ministrado pelo professor \textbf{Lucas Alexandre Zick}. 
+
+A aula começou com a história da criação da linguagem \LaTeX, a linguagem foi criada no ano 1970 inicialmente como TeX para ajudar na escrita de símbolos e formas matemáticas sem que o artigo se desestruturasse. Depois em 1985 o cientista Leslie Lamport percebeu que o TeX era poderoso mas era extremamente complexo para usuários comuns, por exigir muita programação. Por esse motivo ele criou o \LaTeX com a intenção de facilitar o uso do Tex.
+
+Após a história aprendemos os paradigmas da edição de texto. Um programa como o world utiliza o paradigma wysiwyg (what you see is what you get) que significa que tudo o que você vê é o que vai estar no pdf, ou seja, para mudar a formatação e posições do texto você vai ter que fazer isso visualmente colocando os textos no lugar desejado. Já o \LaTeX utiliza do paradigma wysiwym (what you see is what you mean) que significa que a formatação do texto você ensina para o compilador antes de começar o texto, e tudo o que é ditado para a maquina será feito pelo compilador. 
+
+Após a história começamos a mexer no Overleaf, uma plataforma unificada que roda inteiramente no navegador, facilitando na utilização do \LaTeX. Começamos a aprender alguns comandos para a estruturação do texto, um exemplo desses comandos é a quebra de linha sem tabulação\\
+Aprendemos também como colocar porcentagem (\%) sem que os próximos caracteres virem comentário e a formatar texto em \textbf{Negrito}, \textit{Itálico} e deixar o \underline{texto sublinhado}.
+
+%\lipsum[1-5]
+
+\section{Aula 2}
+Na aula 2 realizada no dia 24 de setembro de 2026, aprendemos bastante comandos práticos para utilizar em nossos futuros artigos, a primeira parte da aula aprendemos de forma mais aprofundada o que cada tipo de documentclass significa, o mais comum é o tipo article, que são os artigos curtos de mais ou menos 15 páginas, outro tipo é o report, que basicamente é um artigo longo com uma estrutura totalmente diferente de um artigo curto, em artigos longos temos capas e podemos colocar capítulos. Outro tipo é o book, ele serve para criar livros páginas de um livro, e como o \LaTeX é uma linguagem inteligente, ele consegue identificar páginas impares e páginas pares, e dessa forma faz com que cada cápitulo inicie obrigatóriamente em páginas pares.
+
+Aprendemos também funções para editar o preâmbulo do artigo, por exemplo como colocar margem nas páginas para ficar formatado em padrões como a ABNT que utiliza 3cm na esquerda e em cima e 2cm na direita e em baixo. Ainda no preâmbulo aprendemos como colcoar autores e afiliações para cada autor, como o exemplo desse trabalho que meu nome está com afiliação da UDESC, e como colocar a afiliação e o email dos autores no rodapé da primeira página.
+
+% \vspace{2cm}
+Na segunda parte da aula aprendemos novas funções para a parte escrita do artigo, como adicionar capítulos com o comando \textbackslash chapter (lembrando que artigos no modo article não tem capítulos, essa função serve para artigos longos no modo report, livros, etc..), como adicionar seções utilizando \textbackslash section, subseções com o comando \textbackslash subsection e subsubseções com o comando \textbackslash subsubsection. Na aula também aprendemos a criar o sumário utilizando o comando \textbackslash abstract, que diferente de ferramentas como o word, é muito mais simples de fazer, para fazer a criação do sumário é só colocar uma função no inicio do texto que já aparece um sumário com todos os capítulos e seções ordenados da forma correta, e cada modificação, como a adição ou modificação nas seções, o sumário atualiza de forma automática. Importante lembrar que existem modelos de artigos que não pedem para enumerar as seções, e como o \LaTeX faz a enumeração automática de cada seção, nós aprendemos como fazer para que a seção não fique enumerada, e mesmo assim, apareça no sumário.
+
+
+
+%\lipsum[1-3]
+\section{Aula 3}
+% 1. A fonte padrão (Serifada, tipo 
+Nesta aula aprendemos várias novas funções para mudar o texto e adicionar 
+Começamos a aprendendo como modificar as fontes do texto, para cada fonte existe um comando diferente, o texto padrão do \LaTeX é com fonte com serifas nas bordas, para escrever textos sem serifas utilizamos o comando \textbackslash textsf ficando assim o texto "\textsf{Este texto não possui serifa nas bordas.}". Também temos a fonte com o comando \textbackslash texttt "\texttt{Ótimo para destacar trechos de código ou URLs.}". E por último temos o texto em small caps com o comando \textbackslash textsc "\textsc{Texto em Small Caps}".
+
+No príximo conteúdo aprendemos como mudar o tamanho do texto, no \LaTeX temos 8 tamanho diferentes que podemos utilizar através de comando, para utilizar o comando nos abrimos uma chave, colocamos o tamanho que queremos e dessa forma todo o texto que está dentro das chaves muda de tamanho " \{\textbackslash tiny texto aqui\} ". Os comandos para os tamanhos de texto são :
+\\
+{\tiny \textbackslash tiny (Tamanho minúsculo)}
+\\
+{\scriptsize \textbackslash scriptsize (Tamanho de script)}
+\\
+{\small \textbackslash small (Tamanho pequeno)}
+\\
+{\normalsize \textbackslash normalsize (Tamanho padrão (12pt no nosso caso))}
+\\
+{\large \textbackslash large (Tamanho grande)}
+\\
+{\Large \textbackslash Large (Bem grande)}
+\\
+{\huge \textbackslash huge (Gigante)}
+\\
+{\Huge \textbackslash Huge (Colossal)}
+
+Além disso aprendemos diferentes tipos de alinhamento de texto, por exemplo se usarmos \textbackslash begin\{center\} o texto vai ficar centralizado. 
+\begin{center}
+    Este texto ficara centralizado na página.
+\end{center}
+
+Se usar "flushleft" no lugar do "center" o texto ficará alinhado na esquerda 
+
+\begin{flushleft}
+    Este texto ficara alinhado apenas a esquerda (irregular a direita).
+\end{flushleft}
+
+E por fim se usar "flushright" ao invés de "center" o texto ficará alinhado na direita
+\begin{flushright}
+    Este texto ficara alinhado apenas a direita.
+\end{flushright}
+
+Outra função que aprendemos é de como colocar espaços verticais e horaizontais no texto. Para fazer isso utilizamos os comandos \textbackslash vspace\{\} para espaços verticais e \textbackslash hspace\{\} para espaços horizontais. Dentro das chaves nós colocamos o tamanho do espaço que queremos, por exemplo "2cm". 
+
+\vspace{3cm} "Esse texto tem um espaço vertical de 3cm."
+\hspace{3cm} "Esse texto tem um espaço horizontal de 3cm."
+
+Aprendemos a criar footnote, muito utilizado para adicionar informações complementares, explicações secundárias ou referências bibliográficas sem interromper o fluxo principal do texto.
+
+Um exemplo de footnote é "A Universidade do Estado de Santa Catarina \footnote{Fundada em 1965, e uma da principais instituições estaduais do país.}. Possui diversos campos espalhados pelo estado." Podemos ver que no final da página está o footnote com o número referenciando a parte do texto onde colocamos o footnote. Se quiser adicionar mais um footnote o \LaTeX referencia de forma automática \footnote{Esse é o segundo footnote}.
+
+Aprendemos também como fazer as citações diretas, que são quando citamos diretamente um autor e essa citação passa de 3 linhas, por padrão a ABNT exige um recuo de 4cm, fonte menor (10pt) e espaçamento simples. Em vez de fazer isso manualmente toda vez, utilizamos o ambiente quote com o comando \textbackslash begin{quote} \textbackslash end{quote}, dentro desse ambiente colocamos os comandos \textbackslash singlespacing e \textbackslash small para ficar no padrão ABNT. Um exemplo é essa citação:
+\begin{quote}
+    % \singlespacing
+    \small
+    "A transformação digital não é apenas uma mudança de ferramenta, mas uma remodelação completa na forma como as sociedades integram, produzem e consomem."
+\end{quote}
+
+
+O próximo comando que aprendemos é o comando de criar lista, essas listas podem ser lista de item sem numeração, listas enumeradas com números, listas enumeradas com números Romanos e listas ordenadas por letras alfabéticas. Para criar a lista de itens não numerados iniciamos um ambiente itemize com o comando \textbackslash begin\{itemize\}, adicionar os itens da lista com \textbackslash item item 1, e depois fechar o ambiente com o  \textbackslash end\{itemize\}, um exemplo de lista de itens não ordenadas é:\\
+Os principais componentes do computador são:
+\begin{itemize}
+    \item Placa-mãe
+    \item Processador (CPU)
+    \item Memoria RAM
+\end{itemize}
+
+Para criação de listas ordenadas é um pouco diferente, o comando que usamos para criar o ambiente de uma lista ordenada é \textbackslash begin{enumerate}. Podemos usar listas ordenadas para criar uma lista de passos para atingir um objetivo, por exemplo:
+\begin{enumerate}
+    \item Ligue a máquina.
+    \item Insira o cartão.
+    \item Digite a senha.
+\end{enumerate}
+
+Para mudar a forma de enumeração, por exemplo para números romanos, precisamos importar um pacote \textbackslash usepackage\{enumitem\}. Para utilizar os diferentes nós iniciamos o ambiente da mesma forma que iniciamos uma lista ordenada, mas adicionamos um colchetes depois das chaves para definir um label, ficando assim o comando \textbackslash begin\{enumerate\}[label=], no valor de label podemos colocar \textbackslash alph* para ordenar por letra (a,b,c), \textbackslash Alph* para deixar as letras em maiúsculo (A,B,C), \textbackslash roman para deixar os números em romano (i, ii, iii) e \textbackslash Roman para deixar as letras em maiúsculo (I, II, III). Por exemplo
+\begin{enumerate}[label=\alph*]
+    \item  Primeiro tópico com letra "a".
+    \item Segundo item com a letra "b".
+\end{enumerate}
+
+Para criar listas dentro de listas é muito facil, é só criar um ambiente de lista dentro de outro ambiente de lista, por exemplo criar um \textbackslash begin\{enumerate\} \textbackslash begin\{itemize\} \textbackslash end\{itemize\} \textbackslash end\{enumerate\}
+
+\begin{enumerate}
+    \item Região Sul
+    \begin{itemize}
+        \item Pàraná
+        \item Santa Catarina
+        \item Rio Grande do Sul
+    \end{itemize}
+    \item Região Sudeste
+\end{enumerate}
+
+
+
+%opções de label: \alph* (abc) \ Alph* (ABC), \roman (I II III)
+% texto
+% metadados
+% espaçamento
+% Identação do paragrafo
+% Espaçamento vertical e horizontal
+% Rodape
+% Citações direta
+
+
+
+\section{Aula 4}
+O objetivo da aula 4 é mostrar como fazemos a criação e a escrita de fórmulas matemáticas dentro do texto utilizando o \LaTeX. Para que o compilador entenda todas as formulas matemáticas precisamos importar três pacotes fornecidos pela America Mathematical Society (AMS), que são \textbackslash usepackage\{amsmath\} para fornecer os ambientes essenciais para equações e matrizes, o \textbackslash \{amsfonts\} para fornecer as fontes matemáticas clássicas e \textbackslash \{amssymb\} para adicionar os símbolos matemáticos clássicos.
+
+% criação de ambientes "diferentes" entre latex e ambiente matemático.
+Temos duas maneiras para colocar matemática dentro de um texto, o método inline, que é quando a equação fica entre os textos de uma linha, ou seja, a fórmula vai fizer parte do fluxo da frase. A equação é espremida para não quebrar o espaçamento entre as linhas do parágrafo. Para fazer o método inline utilizamos o cifrão \$ aqui dentro dos cifrões vai a equação matemática \$ e depois dos cifrões o texto volta normalmente. Por exemplo "Calculamos a área do círculo como $A = \pi r^2$"
+
+O outro modo de colocar equações matemática é o modo display, usado para equações importantes. O compilador interrompe o texto, centraliza a fórmula em uma nova linha e usa tamanhos maiores para frações e somatória. Para utilizar esse modo nós criamos o ambiente com \textbackslash [ escrevemos a equação aqui dentro dos colchcetes e terminamos o ambiente co \textbackslash ].
+Por exemplo, a formula de Bhaskara é expressa abaixo:
+\[x = \frac{-b \pm \sqrt{b^2- 4ac}}{2a}\]
+
+Depois de entender como funciona os dois métodos de criação de ambiente matemático aprendemos como fazer de fato as equações. Primeiro aprendemos a fazer potência e índice, para fazer a potência utilizamos o acento circunflexo (\^{}), ou seja, se a gente escrever essa expressão " \$ c\^{}2\$" o resultado fica como $c^2$. Com essa técnica podemos escrever o teorema de Pitaforas que é $c^2 = a^2 + b^2$. Já para escrever índices utilizamos o undeline (\_) ao invés do \^{}, por exemplo "\$x\_1\$" ficaria $x_1$. Com essa técnica podemos dizer, por exemplo, que o robo iniciou na posicao $x_0$ e foi ate $x_3$.
+
+Importante lembrar que dentro de um ambiente matemático, seja ele inline ou dysplay, o compilador entende cada caractere como algo único, ou seja, se eu quiser elevar um número por 13 eu não posso simplesmente fazer \$x\^{}13\$, pois dessa forma o compilador não entende que "13" é um valor só, ele vai tratar como "1" e "3", ou seja x elevado a 1 vezes 3 ($x^13$). Para resolver esse problema existe o agrupamento, que é feito utilizando chaves (\{\}), ou seja, tudo que estiver dentro das chaves o compilador vai agrupar os valores e vai elevar tudo que está nas chaves, por exemplo, \$x\^{} \{13\}\$ resulta em $x^{13}$.
+
+Outras funções que aprendemos, mas agora é obrigatório fazer o agrupamento dentro das chaves, são as funções de fração e raízes. Para fazer a função de raiz escrevermos \textbackslash frac \{numerador\}\{denominador\}, ficando assim no texto "A metade é $\frac{1}{2}$ e o terco é $\frac{1}{3}$.". Para fazer a função de raizes utilizamos \textbackslash sqrt[opicional]\{conteúdo\}, se não colocar os colchetes a raiz vira raiz quadrada, mas podemos modificar colocando o colchetes e algum valor, um exemplo no texto é "A raiz cubica: $\sqrt[3]{27} = 3$.".
+
+Na matemática é muito comum colocar simbolos de letras gregas dentro das equações, no \LaTeX é muito fácil adicionar esses símbolos com apenas um comando. Alguns desses símbolos são \textbackslash alpha ($\alpha$), \textbackslash beta ($\beta$), \textbackslash gamma ($\gamma$), \textbackslash theta ($\theta$) e \textbackslash pi ($\pi$), lembrando que todos esses símbolos precisam estar dentro de um abiente matemático.
+
+Dentro de um ambiente matemático podemos criar algumas funções matemáticas como somatória utilizando \textbackslash sum\_\{valor1\}\^{}\{valor2\}.
+
+\[\sum_{i=1}^{n} i^2\]
+
+Podemos criar produtório utilizando \textbackslash prod\_\{valor1\}\^{}\{n\}.
+\[\prod_{i=1}^{n} (x_i- \bar{x})\]
+
+Para integral utilizamos \textbackslash int\_\{valor1\}\^{}\{valor2\}.
+\[\int_{a}^{b} x^2 \, dx\]
+
+Para Limites utilizamos \textbackslash lim\_\{valor\}, se o limite for até infinito, utilizamos \textbackslash to \textbackslash infty dentro das chaves. 
+\[\lim_{x \to \infty} \frac{1}{x} = 0\]
+
+Na matemática é muito comum representar equações com palavras ao ínves de utilizar variáveis, mas dentro de um ambiente matemático o compilador entende que cada letra é uma variável multiplicando outra, para resolver isso, podemos utilizar a função \textbackslash text\{\} fornecido pelo pacote asmath. Um exemplo é 
+\[\text{Velocidade} = \frac{\text{Distancia}}{\text{Tempo}}\]
+
+Para artigos acadêmicos, toda equação em destaque deve ser numerada na margem direita (Eq. 1,Eq. 2),para que possamos referenciá-las depois. Em vez de usar apenas os colchetes, usamos o ambiente equation com o comando \textbackslash begin \{equation\} equação aqui \textbackslash label\{referenciação\} \textbackslash end \{equation\}. Dessa forma podemos referenciar depois no texto com \textbackslash ref\{referenciação\}.
+
+
+
+\begin{align}
+    2x - 5y &= 8 \\
+    3x + 9y - 7z &= -12
+\end{align}
+% cada caractere é único e temos que agrupar ${23}^{12}$
+\\
+\\
+\\
+
+No final da aula tivemos que fazer alguns desafios para botar em prática os conteúdos da aula, o primeiro desafio era uma matriz igual a matriz abaixo: 
+\[\begin{bmatrix}
+    a_{11} &  a_{12} & \cdots & a_{1n}\\
+    a_{12} & a_{22} & \cdots & a_{2n}\\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{bmatrix}\]
+O segundo desafio foi fazer a equação abaixo:
+
+\[
+i\hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) = \left [\frac{-\hbar^2}{2m}\nabla^2 + V(\mathbf{r}, t) \right ] \psi(\mathbf{r}, t)
+\]
+
+\section{Aula 5}
+
+Na aula 5 aprendemos como fazer e como funciona as imagens e tabelas funcionam dentro do \LaTeX. Diferente de editores comuns de texto em que a imagem é colocada diretamente dentro do texto, no \LaTeX elas são deslocadas dentro de um contêiner flutuante, ou seja, se uma imagem não cabe no fim da página 2, o \LaTeX continua puxando o texto que viria depois dela para preencher a página 2, e posiciona a imagem no topo da página 3, sem deixar a página 2 com um buraco em branco depois do texto. O comando que utilizamos para colocar uma imagem é \textbackslash begin\{figure\}, com esse comando a imagem sera colocada no texto, e se não tiver espaço na página para a imagem, a imagem será empurrada para a próxima página. 
+
+Mas você pode sugerir ao compilador onde prefere que a imagem fique, passando parâmetros em colchetes. Se adicionar um "h" dentro do colchetes o compilador tenta colocar a imagem exatamente onde está no código, se adicionar um "t" o compilador coloca a imagem no topo da página, se adicionar um "b" o compilador coloca na base da página , se colocar um "p" o compilador cria uma página exclusiva para a imagem, e se colocar um "!" o compilador força o \LaTeX a ignorar restrições estéticas internas. Esses parâmetros podem ser combinadas para que se o compilador não conseguir utilizar o primeiro parâmetro, ele utiliza o próximo parâmetro passado, a combinação mais usada no mundo acadêmico é \textbackslash begin\{figure\}[htbp].
+
+As vezes, um iniciante exige que a figura fique exatamente onde foi declarada, custe o que custar. Para isso, importa-se pacote float dentro do preâmbulo com o comando \textbackslash usepackage\{float\} e usa-se o H maiúsculo como parâmetro \textbackslash begin\{figure\}[H].
+
+Para que o \LaTeX consiga importar arquivos externos de imagem (PNG, JPG, PDF), é obrigatório carregar o pacote graphicx no preâmbulo com o comando \textbackslash usepackage\{graphicx\}. Com esse pacote conseguimos desenhar a imagem na tela utilizando o comando \textbackslash includegraphics[opções]\{caminho da imagem\}. Dentro dos colchetes podemos colocar qual a escala da foto com o comando scale, por exemplo \textbackslash includegraphics[scale=0.5]\{logoUdesc.png\}. Podemos escolher qual vai ser a largura da imagem em centímetros utilizando o comando width dentro dos colchetes, por exemplo \textbackslash includegraphics[width-8cm]\{fotoRobo.jpg\}, mas definir tamanhos em centímetros é perigoso se as margens do artigo forem mudadas. O padrão mais utilizado nos artigos acadêmicos é dimensionar a imagem em relação à largura do texto, para fazer isso utilizamos dentro dos colchetes o width junto com \textbackslash textwidth, por exemplo \textbackslash includegraphics[width=0.8\textbackslash textwidth]\{arquiteturaSistema.pdf\}.
+
+Juntando todos os comandos e parâmetros aprendidos, conseguimos criar a anatomia completa do ambiente figure, nunca devemos usar o comando \textbackslash includegraphics solto no texto, sempre o envelopamos dentro de um ambiente figure para ter centralização, legenda e numeração, ficando assim o comando final de imagem:\\
+\textbackslash begin\{figure\}[htb!]\\
+\textbackslash centering \\
+\textbackslash includegraphics [width=0.7\textbackslash textwidth] \{logoUdesc.jpg\} \\
+\textbackslash caption\{Logo UDESC.\}\\
+\textbackslash label\{fig:udesc\}\\
+\textbackslash end\{figure\}
+
+O resultado desse comando é essa imagem:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.2\linewidth]{imagens/logoUdesc.jpg}
+    \caption{Logo UDESC.}
+    \label{fig:udesc}
+\end{figure}
+
+Ao contrário das figuras, as tebelas no \LaTeX exigem dois ambientes trabalhando juntos, o ambiente table que serve para a tabela flutuar na página, centralizar e receber o \textbackslash caption e o \textbackslash label, e o ambiente tabular que fica dentro do table e serve para desenhas as linhas, colunas e colocar os dados dentro da tabela. Ao abrir o ambiente tabular, declaramos a quantidade de colunas existentes e como cada coluna ficará alinhada, para alinhar à esquerda usamos "l", para colnas centralizada usamos "c", para alinhar à direita usamos "r" e para desenhar uma linha vertical entre as colunas usamos "|", uma tabela com 3 colunas (Esquerda, Centro, Direita) com bordas ficaria \textbackslash begin\{tabbular\}\{|l|c|r|\}.
+
+Assim como nas matrizes da últimas aula, cada célula da tabela é separado por um \&, para encerrar a linha atual utilizamos \textbackslash \textbackslash, e para desenhar uma linha horizontal ponta a ponta utilizamos \textbackslash hline. Com esses comando podemos criar tabelas como essa:
+
+\begin{tabular}{|l|c|r|}
+    \hline
+    Componente & Quantidade & Valor (R\$) \\
+    \hline
+    Sensor Laser & 2 & 1500,000\\
+    Microcontrolador & 5 & 45,00\\
+    \hline
+\end{tabular}
+
+Atualmente, tabelas cheias de linhas verticais e horizontais, como essa criada anteriormente, são consideradas amadoras na tipografia científica internacional, a regra da tipografia recomenda nunca usar linhas verticais em tabelas acadêmicas, pois os olhos humanos guiam-se pelo alinhamento espacial das colunas, linhas verticais apenas poluem a leitura. Para criar tabelas com padrão
+% \begin{table}[]
+%     \centering
+%     \caption{Tabela}
+%     \begin{tabular}{c|c}
+%          &  \\
+%          & 
+%     \end{tabular}
+%     \label{tab:placeholder}
+% \end{table}
+
+
+
+\section{Aula 6}
+
+Na aula 6 aprendemos sobre as referências cruzadas no \LaTeX
+
+A vantagem das referências cruzadas no \LaTeX é que podemos fazer as citações e referências dentro do texto de forma muito mais simples, sem precisar se preocupar com a formatação da referência bibliográfica, pois o \LaTeX faz tudo por você, e a única coisa que precisa fazer é colocar a citação dentro do texto utilizando o comando \textbackslash cite\{\} \cite{michels2025real}
+
+\section{Aula 7}
+
+Na aula 7 aprendemos mais sobre os template, sobre como usar e como adaptar textos de um modelo para outro modelo baixado da internet.
+
+Nós já vimos sobre alguns modelos de documentos declarados com o comando \textbackslash documentclass, como article, book, report, etc..., todos esses modelos vem com espaçamento, fonte, margen com um padrão inicial que podemos seguir ou podemos modificar, mas para submeter um artigo ou fazer um TCC, as regras de formatação normalmente são bem restritas, e se for fazer todas as regras de formatação na mão é muito difícil. Além disso, no Brasil temos normas específicas impostas pela Associação Brasileira de Normas Técnicas (ABNT) que devem ser seguidas em todos os trabalhos acadêmicos no Brasil. A ABNT divide o documento em três blocos que possuem regras diferentes. Os elementos pré-textuais são capa, folha de rosto, dedicatória, resumo, listas de figuras e sumário que geralmente não recebem numeração de página visível. Para os elementos textuais temos introdução, fundamentação, metodologia e conclusão, que tem páginas numeradas no canto superior direito da folha. E por fim os elementos pós-textuais temos referências bibliográficas e apêndice. 
+
+Para facilitar o desenvolvimento de trabalhos em formatos ABNT foi criada a classe abntex2 que fornece todos elementos com todas as regrinhas que a ABNT impôe para os trabalhos acadêmicos, quando ativamos a classe abntex2 no preâmbulo com o comando \textbackslash documentclass\{abntex2\}, ganhamos acesso a comandos como \textbackslash imprimirfolhaderosto, \textbackslash begin\{dedicatoria\}, \textbackslash begin\{agradecimentos\} e \textbackslash begin\{epigrafe\}, esses comandos criam todos esses elementos pré-textuais de forma automática.
+Outra grande dificuldade é gerar o índice de figuras e o índice de tabelas, mas utilizando \textbackslash caption em todas as imagens no abntex2 o trabalho é zero, para criar a lista de ilustrações baseadas no caption basta usar o comando \textbackslash listoffigures* e para criar a lista de tabelas basta usar o comando \textbackslash listoftables*
+
+Quando você vai submeter um artigo para IEEE por exemplo, ao invés de ficar configurando todas as margens, tamanho de colunas, fonte tudo na mão, a IEEE e outras revistas disponibilizam um arquivo .zip contendo todos os arquivos com os estilos e imagens prontas para ser usado. Dentro do .zip vão ter alguns tipos de arquivos, o arquivo .cls contém as classes documentais que personaliza o documento, o arquivo .sty contém os pacotes de estilos adicionais, o arquivo .bst tem o estilo de bibliografia personalizada, e claro o arquivo .tex que é o arquivo principal onde vai ter um preencimento exemplo.
+
+No final da aula baixamos o modelo de trabalho acadêmico da UDESC para aprender a editar modelos prontos da internet, e passamos todos os textos do nosso meta-artigo que antes era escrito em um documento sem formatação, para o modelo da UDESC. 
+
+
+
+\section{Aula 8}
+
+Na aula 8 começamos a aprender a utilizar o \LaTeX diretamente na máquina, sem ficar dependente do Overleaf que vem com vários problemas por ser um software limitado na versão gratuita e totalmente online, trazendo problemas como o de timeout, que dependendo do tamanho do artigo ou dependendo da lentidão da internet o artigo não vai compilar, além de problemas de privacidade e segurança, pois toda sua pesquisa e seus dados estarão na internet suscetível a uma invasão ou um roubo de dados.
+
+Primeiramente precisamos instalar o \LaTeX na máquina e precisamos entender que o \LaTeX não é um software que você consegue abrir e tem uma interface para editar os textos e navegar pelas pastas, o \LaTeX é um ecossistema parecido com o python que fica invisível no sistema operacional contendo todos os pacotes necessários para compilar e gerar o pdf.
+
+Existem 3 diferentes cérebros para compilar o seu código \LaTeX e gerar o pdf, cada um com suas vantagens. O pdfLaTeX é o motor mais antigo e é o padrão para a maioria das revistas, o único problema é que ele lida muito mal com fontes modernas do Windows e Mac. O XeLaTeX é um motor mais moderno e permite utilizar o comando \textbackslash setmainfontArial para que o documento inteiro utilize as fontes instaladas nativamente no Window e Linux, além de suportar UTF-8 nativamente. Já o LuaLaTeX é a linguagem mais moderna, que permite embutir a linguagem de programação Lua dentro do motor de tipografia, permitindo realizar cálculos absurdos durante a compilação.
+
+Para editar o código .tex utilizaremos o Visual Studio Code (VSCode) por causa de uma única extensão mantida pela comunidade chamada LaTeX Workshop que traz várias funcionalidades que vão facilitar muito na escrita do artigo, essa extensão vem com auto-build que compila o documento sozinho sempre que você aperta Ctrl+S, o syncTex automático que conecta o pdf ao código, ou seja, se você der um duplo clique no pdf ele te mostra a linha exata no código, e por último o linter integrado que serve como um corretor de \LaTeX que sublinha erros no código, como palavras erradas, chaves não fechadas, etc. Além disso o VSCode vem com um script criado pela comunidade chamado latexmk, esse script vai servir como um regente de orquestra que, ao invés de compilar todos os arquivos e códigos do projeto, ele vai analisar o que mudou no seu código e vai decidir o que precisa ser recompilado, deixando a compilação do código muito mais rápida.
+
+Depois de migrar para o \LaTeX localmente precisamos entender erros e falhas através do arquivo .log, no Overleaf nós vemos os erros e avisos em uma janela vermelha amigável, localmente não temos essa janela com o erro de forma amigável, precisamos entender o que está no arquivo .log para entender quais erros estão presentes no código e principalmente onde está esse erro. Existem dois tipos de erros principais que podemos encontrar dentro do arquivo log, os Erros Fatais que vão quebrar o código e não vão conseguir gerar o pdf, e os Warnings (Avisos) que mesmo estando presentes no código não vão deixar de gerar o pdf, mas vai ter um aviso de que algo está errado. O Warning mais famoso no mundo \LaTeX é o Overfull \textbackslash hbox (15.23pt too wide) in paragraph at lines 45--48, que significa que a palavra ou figura extrapolou as margens invisíveis do papel e invadiu a área de recuo, o \LaTeX tentou hifenizar a palavra mas não conseguiu. Já os erros fatais mais comuns são o "Missing \$ inserted" que significa que você usou um símbulo matemático no meio do texto sem abrir as aspas matemáticas, p "Undefined control sequence" que significa que você digitou um comando errado ou esqueceu de carregar o pacote, e o "File ended while scanning use of" que significa que você abriu uma chave ou um ambiente \textbackslash begin e esqueceu de fechar. 
+
+
+
+\section{Aula 9}
+
+
+
+\section{Aula 10}
+\lipsum[1-3]
+\section{Aula 11}
+\lipsum[1-3]
+\section{Aula 12}
+\lipsum[1-3]
+
+
