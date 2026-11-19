@@ -209,7 +209,7 @@ O resultado desse comando é essa imagem:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.2\linewidth]{imagens/logoUdesc.jpg}
+    \includegraphics[width=0.2\linewidth]{logoUdesc.jpg}
     \caption{Logo UDESC.}
     \label{fig:udesc}
 \end{figure}
@@ -292,7 +292,22 @@ Para conectar sua máquina local à nuvem, usamos o comando de rede "git remote 
 
 
 \section{Aula 10}
-\lipsum[1-3]
+
+A aula 10 foi focada em modlarização de documentos e diretórios para facilitar e organizar melhor projetos com diversas páginas e capítulos como o tcc. O conceito de modularizar significa transformar um genade sistema ou código complexo em partes menores chamadas de módulo, deixando o código muito mais simples e organizado. 
+
+No \LaTeX podemos utilizar a modularização para fazer a separação dos capítulos, em um trabalho grande como tcc, temos diversas páginas com diversos capítulos, e se todas essas linhas de texto ficarem em um só arquivo main.tex o código ficaria gigante, dificultando muito na hora de fazer uma correção em uma parte específica do texto dentro de um arquivo que contém mais de mil linhas de código.
+
+Além desse problma, escrever um trabalho ou artigo em um arquivo só traz problemas quando estamos trabalhando em equipe dentro do git. Quando duas ou mais pessoas editam o mesmo arquivo dentro do git pode gerar conflitos quando fazemos o commit para o github. Quando modularizamos os capítulos, podemos trabalhar no mesmo projeto sem dar conflitos, pois cada um esta editando um arquivo diferente.
+
+Para fazer a modularização do nosso texto vamos separar cada pelemento do texto em um arquivo diferente, podemos separar elementos pré-textuais como resumo, sumário, capa, etc... podemos separar os elementos textuais como introdução, cada capítulo, Considerações finais, etc... e podemos separar elementos pós-textuais como anexos, gossários, apendices, etc... . Com esses elementos separados, bata incluí-los dentro do main.text. Existe duas formas de incluir esses elementos dentro do arquivo principal, o primeiro é utilizando o comando \textbackslash input\{arquivo.tex\} dentro do local onde o texto será inserido, com esse comando o \LaTeX vai copiar todo o conteúdo que esta dentro do arquivo e vai colar no local onde o comando está, sem alterar o fluxo da página, como se fosse um ctrl+c ctrl+v. Podemos usar também o comando \textbackslash include\{arquivo.tex\}, diferente do \textbackslash input, esse comando vai influenciar no fluxo do texto pois quando o \LaTeX vai executar o comando \textbackslash clearpage antes e depois do arquivo importado, garantindo que o novo conteúdo comece no topo de uma página limpa e que todas as figuras e tabelas pendentes sejam processadas.
+
+Mas a questão que fica é, qual escolher na hora de escrever o artigo? O \textbackslash input é mais usado para separar tabelas gigantes que poluem o código, ou para separar seções de um artigo que não quebram página. Também é ótimo para jogar todos os \textbackslash usepackage em um arquivo pacotes.tex e limpar a visão no preâmbulo. Já o \textbackslash include é mais usado para separar capítulos independentes de teses. Ele cria arquivos auxiliares individuais, o que permite usar o \textbackslash includeonly\{arquivo.tex\}, ele avisa o \LaTeX para compilar apenas o capítulo que você está editando, tornando a compilação muito mais leve e muito mais rápida. 
+
+
+
+
+
+
 \section{Aula 11}
 \lipsum[1-3]
 \section{Aula 12}
